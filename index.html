@@ -1,51 +1,26 @@
-<html>
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>user-xiao3-yao1-wen4-dao4</title>
-
+    <title>網頁標題</title>
+    <!-- 這裡可以放 CSS 或 meta 標籤 -->
     <style>
+        /* CSS 可以寫在這裡 */
         body {
+            font-family: Arial, sans-serif;
             background-color: #f5f5f5;
-            font-family: Arial;
-            padding: 20px;
-        }
-
-        h1 {
-            color: blue;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: orange;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        #result {
-            margin-top: 20px;
-            font-size: 20px;
-            color: green;
         }
     </style>
 </head>
-
 <body>
+    <!-- 網頁內容放在這裡 -->
+    <h1>哈囉，世界！</h1>
+    <p>這是一個段落。</p>
 
-    <h1>哈囉！世界</h1>
-    <p>這是一個 HTML + CSS + JS 都在同一個檔案的例子。</p>
-
-    <button onclick="sayHello()">按我</button>
-
-    <p id="result"></p>
-
+    <!-- JavaScript 可以放在這裡 -->
     <script>
         function sayHello() {
-            document.getElementById("result").textContent = "你剛剛按了按鈕！";
-            alert("JS 成功運作！");
+            alert("Hello!");
         }
     </script>
-
 </body>
 </html>
