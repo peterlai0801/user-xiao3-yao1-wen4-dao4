@@ -2,47 +2,67 @@
 <head>
     <meta charset="UTF-8">
     <title>網頁標題</title>
-    <style>
-        /* CSS 基本樣式 */
+   style>
+.tabs {
+    width: 100%;
+}
 
-        /* 設定全頁字型與背景顏色 */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
+.tabs input {
+    display: none;
+}
 
-        /* 標題樣式 */
-        h1 {
-            color: #333;
-            font-size: 36px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.tabs label {
+    padding: 10px 20px;
+    display: inline-block;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+}
 
-        /* 段落樣式 */
-        p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
+.tabs label:hover {
+    background: #ccc;
+}
 
-        /* 按鈕樣式 (如果將來有使用) */
-        button {
-            background-color: orange;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+}
 
-        button:hover {
-            background-color: darkorange;
-        }
-    </style>
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+    display: block;
+}
+
+.tabs input:checked + label {
+    background: white;
+    border-bottom: 1px solid white;
+}
+</style>
+
+<div class="tabs">
+    <input type="radio" id="tab1" name="tab" checked>
+    <label for="tab1">分頁 1</label>
+
+    <input type="radio" id="tab2" name="tab">
+    <label for="tab2">分頁 2</label>
+
+    <input type="radio" id="tab3" name="tab">
+    <label for="tab3">分頁 3</label>
+
+    <div id="content1" class="tab-content">
+        這是第一頁內容。
+    </div>
+    <div id="content2" class="tab-content">
+        這是第二頁內容。
+    </div>
+    <div id="content3" class="tab-content">
+        這是第三頁內容。
+    </div>
+</div>
 </head>
 <body>
     <h1>哈囉，世界！</h1>
